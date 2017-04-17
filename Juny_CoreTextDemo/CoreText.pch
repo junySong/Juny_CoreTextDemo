@@ -1,0 +1,31 @@
+//
+//  CoreText.pch
+//  Juny_CoreTextDemo
+//
+//  Created by 宋俊红 on 17/4/6.
+//  Copyright © 2017年 Juny_song. All rights reserved.
+//
+
+#ifndef CoreText_pch
+#define CoreText_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define debugLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define debugLog(...)
+#define debugMethod()
+#endif
+#define RGB(A, B, C)    [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:1.0]
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
+#import <UIKit/UIKit.h>
+#import "UIView+frameAdjust.h"
+#import <CoreText/CoreText.h>
+
+#endif /* CoreText_pch */
